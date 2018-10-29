@@ -1,0 +1,78 @@
+body{
+	text-align: center;
+	
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+.background{
+    background: url("../img/FINAL_BACKGROUND.png")  no-repeat center center ;
+    min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.title{
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.option{
+    font-size:  28px;
+    background: lightgrey;
+}
+
+.optionMobile {
+    color: white;
+}
+
+
+
+.desktop {
+    display: block;
+}
+
+.desktop2{
+    display: flex;
+}
+
+.mobile {
+    display: none;
+}
+
+.only-mobile{
+    display: none;
+}
+
+.innova {
+    margin: 30px;
+}
+
+
+@media only screen and (max-width: 960px) {
+    /* For mobile phones: */
+    .desktop{
+        display: none;
+    }
+    .desktop2{
+        display: none;
+    }
+    .mobile{
+        display:block;
+    }
+    .innova {
+        margin: 20px;
+        height:auto;
+        width:80%;
+    }
+    .background{
+        background: url("../img/back.png")  no-repeat center center ;
+        min-height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .only-mobile{
+        display: block;
+    }
+}

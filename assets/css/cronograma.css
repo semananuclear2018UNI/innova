@@ -25,6 +25,10 @@ td{
         background: rgba(220, 220, 220, 0.678);
 }
 
+.bold{
+        font-weight: bold;
+}
+
 table > h3{
         margin: 5px;
 }

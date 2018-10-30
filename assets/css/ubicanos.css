@@ -1,12 +1,23 @@
+/* .fiis{
+        background: url("../img/FIIS-1.jpg") no-repeat center center ;
+        min-height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        
+} */
 
 .fiis {
         background: url("../img/fiis.jpg") no-repeat center center ;
         min-height: 100%;
-        background-size: cover;        
+        background-size: cover;
+        /* background-attachment: fixed; */
+        
+        
         max-width: 100%;
         position:relative;
         color: white;
         z-index:1;
+        margin-bottom: 10px;
       }
       
       .fiis::after {
@@ -21,13 +32,16 @@
       }
 
 .location{
+        /* margin: 20px; */
         padding: 20px;
-        color: #009bff;
+        color: #ffffff;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 
 @media only screen and (max-width: 960px) {
+        /* For mobile phones: */
+
         .fiis{
                 margin-bottom: 20px;
         }

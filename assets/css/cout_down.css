@@ -174,7 +174,24 @@ body {
 
 
   @media only screen and (max-width: 960px) {
-    
+    /* For mobile phones: */
+    /* .countdown {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      margin: 0 auto;
+    } */
+
+    /* .countdown .figure {
+      
+      position:fixed;
+
+      width:100px;
+      height:100px;
+
+      
+    } */
+
 
     .countdown { 
        
@@ -188,7 +205,9 @@ body {
       width:110px;
       height:100px;
     }
-
+    .clear { 
+      /* clear:both;  */
+    }
     .count-title{      
       text-align: center;
       display: flex;

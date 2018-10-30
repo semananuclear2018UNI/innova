@@ -1,756 +1,737 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-
+    <head>
+        <meta charset="UTF-8">
+        
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
-        crossorigin="anonymous">
-
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/cout_down.css">
     <link rel="stylesheet" href="assets/css/cronograma.css">
     <link rel="stylesheet" href="assets/css/timeline.css">
     <link rel="stylesheet" href="assets/css/ubicanos.css">
-
+    
     <title>Semana Nuclear</title>
 </head>
-
 <body class="background">
 
-    <div id="megadiv">
+    <div id="megadiv"> <!-- MEGADIV -->
 
-        <nav id="barra">
-            <div class="pos-f-t mobile">
-                <div class="collapse" id="navbarToggleExternalContent">
-                    <div class="bg-dark p-4">
-                        <p class="optionMobile"><a v-on:click="change('inicio')">Inicio</a></p>
-                        <p class="optionMobile"><a v-on:click="change('somos')">¿Quienes somos?</a></p>
-                        <p class="optionMobile"><a v-on:click="change('cronograma')">Cronograma</a></p>
-                        <p class="optionMobile"><a v-on:click="change('ubicanos')">Ubícanos</a></p>
-                        <p class="optionMobile"><a href="https://semananuclear1.typeform.com/to/q2Iynk" class="optionMobile">Inscribete</a></p>
-                    </div>
-                </div>
-                <nav class="navbar navbar-dark bg-dark">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-                        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </nav>
-            </div>
-            <div class="desktop">
-                <div>
-                    <ul class="nav nav-tabs d-flex align-items-center d-flex justify-content-center ">
-
-                        <li class="nav-item option">
-                            <a class="nav-link" href="#" v-on:click="change('inicio')">Inicio</a>
-                        </li>
-                        <li class="nav-item option">
-                            <a class="nav-link" href="#" v-on:click="change('somos')">¿Quienes somos?</a>
-                        </li>
-                        <li class="nav-item option">
-                            <a class="nav-link" href="#" v-on:click="change('cronograma')">Cronograma</a>
-                        </li>
-                        <li class="nav-item option">
-                            <a class="nav-link" href="#" v-on:click="change('ubicanos')">Ubícanos</a>
-                        </li>
-                        <li class="nav-item option">
-                            <a class="nav-link" href="https://semananuclear1.typeform.com/to/q2Iynk" target="_blank">Inscríbete</a>
-                        </li>
-                    </ul>
+    <nav id="barra">
+        <div class="pos-f-t mobile">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                    <p class="optionMobile"><a v-on:click="change('inicio')">Inicio</a></p>
+                    <p class="optionMobile"><a v-on:click="change('somos')">¿Quienes somos?</a></p>
+                    <p class="optionMobile"><a v-on:click="change('cronograma')">Cronograma</a></p>
+                    <p class="optionMobile"><a v-on:click="change('ubicanos')">Ubícanos</a></p>
+                    <p class="optionMobile"><a href="https://semananuclear1.typeform.com/to/q2Iynk" class="optionMobile">Inscribete</a></p>
                 </div>
             </div>
-        </nav>
+            <nav class="navbar navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+                    aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
+        <div class="desktop">
+            <div>
+                <ul class="nav nav-tabs d-flex align-items-center d-flex justify-content-center ">
+                
+                    <li class="nav-item option">
+                        <a class="nav-link" href="#" v-on:click="change('inicio')">Inicio</a>
+                    </li>
+                    <li class="nav-item option">
+                        <a class="nav-link" href="#" v-on:click="change('somos')">¿Quienes somos?</a>
+                    </li>
+                    <li class="nav-item option">
+                        <a class="nav-link" href="#" v-on:click="change('cronograma')">Cronograma</a>
+                    </li>
+                    <li class="nav-item option">
+                        <a class="nav-link" href="#" v-on:click="change('ubicanos')">Ubícanos</a>
+                    </li>
+                    <li class="nav-item option">
+                        <a class="nav-link" href="https://semananuclear1.typeform.com/to/q2Iynk" target="_blank">Inscríbete</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
         <div id="pages">
 
-            <div v-show=inicio>
-                <div>
-                    <figure class="">
-                        <img class="innova" src="assets/img/innova.png" height="250px">
-                    </figure>
-                </div>
-
-                <div class="">
-                    <div class="countdown">
-
-                        <div class="bloc-time days clear">
-
-                            <span class="count-title justify-content-center">Dias</span>
-
-                            <div class="d-flex justify-content-center">
-                                <div class="figure days days-1">
-                                    <span class="top">0</span>
-                                    <span class="top-back">
-                                        <span>0</span>
-                                    </span>
-                                    <span class="bottom">0</span>
-                                    <span class="bottom-back">
-                                        <span>0</span>
-                                    </span>
+            <div v-show=inicio> 
+                        <div>
+                            <figure class="">
+                                <img class="innova" src="assets/img/innova.png" height="250px">
+                            </figure>
+                        </div>
+                    
+                    
+                        <!-- COUNTDOWN -->
+                    
+                        <div class="">
+                            <div class="countdown">
+                    
+                                <div class="bloc-time days clear">
+                                    
+                                    <span class="count-title justify-content-center">Dias</span>
+                    
+                                    <div class="d-flex justify-content-center">
+                                        <div class="figure days days-1">
+                                            <span class="top">0</span>
+                                            <span class="top-back">
+                                                <span>0</span>
+                                            </span>
+                                            <span class="bottom">0</span>
+                                            <span class="bottom-back">
+                                                <span>0</span>
+                                            </span>
+                                        </div>
+                                    
+                                        <div class="figure days days-2">
+                                            <span class="top">0</span>
+                                            <span class="top-back">
+                                                <span>0</span>
+                                            </span>
+                                            <span class="bottom">0</span>
+                                            <span class="bottom-back">
+                                                <span>0</span>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="figure days days-2">
-                                    <span class="top">0</span>
-                                    <span class="top-back">
-                                        <span>0</span>
-                                    </span>
-                                    <span class="bottom">0</span>
-                                    <span class="bottom-back">
-                                        <span>0</span>
-                                    </span>
+                                <div class="bloc-time hours clear" >
+                                    <span class="count-title justify-content-center">HORAS</span>
+                                
+                                    <div class="d-flex justify-content-center">
+                                        <div class="figure hours hours-1">
+                                            <span class="top">0</span>
+                                            <span class="top-back">
+                                                <span>0</span>
+                                            </span>
+                                            <span class="bottom">0</span>
+                                            <span class="bottom-back">
+                                                <span>0</span>
+                                            </span>
+                                        </div>
+                                        <div class="figure hours hours-2">
+                                            <span class="top">0</span>
+                                            <span class="top-back">
+                                                <span>0</span>
+                                            </span>
+                                            <span class="bottom">0</span>
+                                            <span class="bottom-back">
+                                                <span>0</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bloc-time min clear" data-init-value="0">
+                                    <span class="count-title justify-content-center">MINUTOS</span>
+                                
+                                    <div class="d-flex justify-content-center">
+                                        <div class="figure min min-1">
+                                            <span class="top">0</span>
+                                            <span class="top-back">
+                                                <span>0</span>
+                                            </span>
+                                            <span class="bottom">0</span>
+                                            <span class="bottom-back">
+                                                <span>0</span>
+                                            </span>
+                                        </div>
+                                    
+                                        <div class="figure min min-2">
+                                            <span class="top">0</span>
+                                            <span class="top-back">
+                                                <span>0</span>
+                                            </span>
+                                            <span class="bottom">0</span>
+                                            <span class="bottom-back">
+                                                <span>0</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bloc-time sec clear" data-init-value="0">
+                                    <span class="count-title justify-content-center">SEGUNDOS</span>
+                                
+                                    <div class="d-flex justify-content-center">
+                                        <div class="figure sec sec-1">
+                                            <span class="top">0</span>
+                                            <span class="top-back">
+                                                <span>0</span>
+                                            </span>
+                                            <span class="bottom">0</span>
+                                            <span class="bottom-back">
+                                                <span>0</span>
+                                            </span>
+                                        </div>
+                                    
+                                        <div class="figure sec sec-2">
+                                            <span class="top">0</span>
+                                            <span class="top-back">
+                                                <span>0</span>
+                                            </span>
+                                            <span class="bottom">0</span>
+                                            <span class="bottom-back">
+                                                <span>0</span>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="bloc-time hours clear">
-                            <span class="count-title justify-content-center">HORAS</span>
-
-                            <div class="d-flex justify-content-center">
-                                <div class="figure hours hours-1">
-                                    <span class="top">0</span>
-                                    <span class="top-back">
-                                        <span>0</span>
-                                    </span>
-                                    <span class="bottom">0</span>
-                                    <span class="bottom-back">
-                                        <span>0</span>
-                                    </span>
-                                </div>
-                                <div class="figure hours hours-2">
-                                    <span class="top">0</span>
-                                    <span class="top-back">
-                                        <span>0</span>
-                                    </span>
-                                    <span class="bottom">0</span>
-                                    <span class="bottom-back">
-                                        <span>0</span>
-                                    </span>
+                        <!-- FIN COUNTDOWN-->
+                    
+                    
+                    
+                        <div class="only-mobile" style="color: chartreuse; margin-top: 1px;">
+                            ______________________
+                        </div>
+                    
+                    
+                        <div class="container only-mobile">
+                            <div class="row">
+                                <div class="col-md-8 only-mobile" style="color:chartreuse;">Organizan:</div>
+                                <div class="col-md-4 d-flex justify-content-center" style="margin: 15px;">
+                                    <img class="d-flex justify-content-center" src="assets/img/semana_logo.svg" alt="logo semana nuclear" height="50px">
                                 </div>
                             </div>
-                        </div>
-                        <div class="bloc-time min clear" data-init-value="0">
-                            <span class="count-title justify-content-center">MINUTOS</span>
-
-                            <div class="d-flex justify-content-center">
-                                <div class="figure min min-1">
-                                    <span class="top">0</span>
-                                    <span class="top-back">
-                                        <span>0</span>
-                                    </span>
-                                    <span class="bottom">0</span>
-                                    <span class="bottom-back">
-                                        <span>0</span>
-                                    </span>
-                                </div>
-
-                                <div class="figure min min-2">
-                                    <span class="top">0</span>
-                                    <span class="top-back">
-                                        <span>0</span>
-                                    </span>
-                                    <span class="bottom">0</span>
-                                    <span class="bottom-back">
-                                        <span>0</span>
-                                    </span>
-                                </div>
+                    
+                            <div class="row">
+                                <div class="col-md-8 only-mobile" style="color:chartreuse;">Auspician:</div>
+                    
                             </div>
-                        </div>
-                        <div class="bloc-time sec clear" data-init-value="0">
-                            <span class="count-title justify-content-center">SEGUNDOS</span>
-
-                            <div class="d-flex justify-content-center">
-                                <div class="figure sec sec-1">
-                                    <span class="top">0</span>
-                                    <span class="top-back">
-                                        <span>0</span>
-                                    </span>
-                                    <span class="bottom">0</span>
-                                    <span class="bottom-back">
-                                        <span>0</span>
-                                    </span>
+                    
+                            
+                            <div class="row d-flex align-self-center">
+                                <div class="col align-self-center" style="margin: 15px;">
+                                    <img class="" src="assets/img/logo_nucleo.svg" alt="logo nucleo" width="50%">
                                 </div>
-
-                                <div class="figure sec sec-2">
-                                    <span class="top">0</span>
-                                    <span class="top-back">
-                                        <span>0</span>
-                                    </span>
-                                    <span class="bottom">0</span>
-                                    <span class="bottom-back">
-                                        <span>0</span>
-                                    </span>
+                                <div class="col align-self-center" style="margin: 15px;">
+                                        <img class="" src="assets/img/logo_fiis.svg" alt="logo nucleo" width="50%">
                                 </div>
+                    
                             </div>
+                            
+                    
+                            
+                            <div class="row d-flex align-self-center">
+                                    <div class="col align-self-center" style="margin: 15px;">
+                                        <img class="" src="assets/img/logo_uni.svg" alt="logo uni" width="50%">
+                                    </div>
+                    
+                        
+                                </div>
+                    
+                    
+                        
+                    
+                    
+                    
+                    
                         </div>
-                    </div>
-                </div>
-
-                <div class="only-mobile" style="color: chartreuse; margin-top: 1px;">
-                    ______________________
-                </div>
-
-
-                <div class="container only-mobile">
-                    <div class="row">
-                        <div class="col-md-8 only-mobile" style="color:chartreuse;">Organizan:</div>
-                        <div class="col-md-4 d-flex justify-content-center" style="margin: 15px;">
-                            <img class="d-flex justify-content-center" src="assets/img/semana_logo.svg" alt="logo semana nuclear"
-                                height="50px">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-8 only-mobile" style="color:chartreuse;">Auspician:</div>
-
-                    </div>
-
-
-                    <div class="row d-flex align-self-center">
-                        <div class="col align-self-center" style="margin: 15px;">
-                            <img class="" src="assets/img/logo_nucleo.svg" alt="logo nucleo" width="50%">
-                        </div>
-                        <div class="col align-self-center" style="margin: 15px;">
-                            <img class="" src="assets/img/logo_fiis.svg" alt="logo nucleo" width="50%">
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="row d-flex align-self-center">
-                        <div class="col align-self-center" style="margin: 15px;">
-                            <img class="" src="assets/img/logo_uni.svg" alt="logo uni" width="50%">
-                        </div>
-
-
-                    </div>
-
-
-
-
-
-
-
-                </div>
             </div>
 
 
             <div v-show=cronograma>
                 <br>
+                
+
+                    <div id="" class="boxTable table-responsive-lg"> <!-- mode -->
 
 
-                <div id="" class="boxTable table-responsive-lg">
-                    <!-- mode -->
-
-
-                    <table class="table t01">
+                        <table class="table t01">
                         <thead class="thead-dark">
-                            <tr align="center">
-                                <th scope="col"><img src="assets/img/innova.png" height="50px"></th>
-                                <th scope="col">Miercoles 7 Auditorio FIIS</th>
-                                <th scope="col" colspan="2">Jueves 8 Ex Auditorio FIIS</th>
-                                <th scope="col">Viernes 9 Auditorio FIIS</th>
+                            <tr align = "center">
+                            <th scope="col"><img src="assets/img/innova.png" height="50px"></th>
+                            <th scope="col">Miercoles 7 Auditorio FIIS</th>
+                            <th scope="col" colspan="2">Jueves 8 Ex Auditorio FIIS</th>
+                            <th scope="col">Viernes 9 Auditorio FIIS</th>
                             </tr>
                         </thead>
                         <tbody align="center">
-                            <tr>
+                            <tr >
                                 <th scope="row">2:30 - 3:30</th>
-                                <td class="align-middle" rowspan="2">Registro y entrega de materiales</td>
+                                <td class="align-middle bold" rowspan="2">Registro y entrega de materiales</td>
                                 <td class="align-middle" rowspan="1" colspan="2"></td>
                                 <td class="align-middle" rowspan="1"></td>
-
+                                
                             </tr>
                             <tr>
                                 <th scope="row">3:30 - 4:00 </th>
-                                <td class="align-middle" rowspan="1" colspan="2">Registro</td>
-                                <td class="align-middle" rowspan="1">Registro</td>
+                                <td class="align-middle  bold" rowspan="1" colspan="2">Registro</td>
+                                <td class="align-middle bold" rowspan="1">Registro</td>
                             </tr>
                             <tr>
                                 <th scope="row">4:00 - 4:30</th>
-                                <td class="align-middle" rowspan="2">Inauguración</td>
-                                <td class="align-middle" rowspan="4" data-toggle="modal" data-target="#Bloomberg"><a
-                                        class="verticalText">Bloomberg</a></td>
-                                <td class="align-middle" rowspan="4" data-toggle="modal" data-target="#Liderazgo"><a
-                                        class="verticalText">Liderazgo</a></td>
-                                <td class="align-middle" rowspan="2" data-toggle="modal" data-target="#BigData">Big
-                                    Data</td>
+                                <td class="align-middle bold" rowspan="2">Inauguración</td>
+                                <td class="align-middle bold" rowspan="4" data-toggle="modal" data-target="#Bloomberg"><a class="verticalText">Bloomberg</a></td>
+                                <td class="align-middle bold" rowspan="4" data-toggle="modal" data-target="#Liderazgo"><a class="verticalText bold" >Liderazgo</a></td>
+                                <td class="align-middle bold" rowspan="2" data-toggle="modal" data-target="#BigData">Big Data</td>
                             </tr>
                             <tr>
                                 <th scope="row">4:30 - 5:00</th>
-
+                        
                             </tr>
                             <tr>
                                 <th scope="row">5:00 - 5:30</th>
-                                <td class="align-middle" rowspan="2" data-toggle="modal" data-target="#TransformacionDigital"
-                                    data-toggle="modal" data-target="#TransformacionDigital">Transformación digital</td>
-                                <td class="align-middle" rowspan="2" data-toggle="modal" data-target="#ProyectoReniec">Proyecto
-                                    Reniec</td>
+                                <td class="align-middle bold" rowspan="2"data-toggle="modal" data-target="#TransformacionDigital" data-toggle="modal" data-target="#TransformacionDigital">Transformación digital</td>
+                                <td class="align-middle bold" rowspan="2" data-toggle="modal" data-target="#ProyectoReniec">Proyecto Reniec</td>
                             </tr>
                             <tr>
                                 <th scope="row">5:30 - 6:00</th>
-
+                                
                             </tr>
                             <tr>
                                 <th scope="row">6:00 - 6:30</th>
-                                <td class="align-middle" rowspan="2" data-toggle="modal" data-target="#Manufactura">Manufactura
-                                    4.0</td>
-                                <td class="align-middle" colspan="2">Coffee break</td>
-                                <td>Coffee break</td>
+                                <td class="align-middle bold" rowspan="2" data-toggle="modal" data-target="#Manufactura">Manufactura 4.0</td>
+                                <td class="align-middle bold" colspan="2">Coffee break</td>
+                                <td class="align-middle bold">Coffee break</td>
                             </tr>
                             <tr>
                                 <th scope="row">6:30 - 7:00</th>
-                                <td class="align-middle" rowspan="4" data-toggle="modal" data-target="#Bloomberg"><a
-                                        class="verticalText">Bloomberg</a></td>
-                                <td class="align-middle" rowspan="4" data-toggle="modal" data-target="#Liderazgo"><a
-                                        class="verticalText">Liderazgo</a></td>
-                                <td class="align-middle" rowspan="2" data-toggle="modal" data-target="#Blockchain">Blockchain</td>
+                                <td class="align-middle bold" rowspan="4" data-toggle="modal" data-target="#Bloomberg"><a class="verticalText" >Bloomberg</a></td>
+                                <td class="align-middle bold" rowspan="4" data-toggle="modal" data-target="#Liderazgo"><a class="verticalText">Liderazgo</a></td>
+                                <td class="align-middle bold" rowspan="2" data-toggle="modal" data-target="#Blockchain">Blockchain</td>
                             </tr>
                             <tr>
                                 <th scope="row">7:00 - 7:30</th>
-                                <td>Coffee break</td>
-
+                                <td class="align-middle bold">Coffee break</td>  
+                        
                             </tr>
                             <tr>
                                 <th scope="row">7:30 - 8:00</th>
-                                <td class="align-middle" rowspan="2" data-toggle="modal" data-target="#InternetDeLasCosas">Internet
-                                    de las cosas</td>
-                                <td class="align-middle" rowspan="2" data-toggle="modal" data-target="#innovacion">Innovación</td>
+                                <td class="align-middle bold" rowspan="2" data-toggle="modal" data-target="#InternetDeLasCosas">Internet de las cosas</td>
+                                <td class="align-middle bold" rowspan="2" data-toggle="modal" data-target="#innovacion">Innovación</td>
                             </tr>
                             <tr>
                                 <th scope="row">8:00 - 8:30</th>
-
+                        
                             </tr>
-                        </tbody>
-                    </table>
-
-
-
-
-                </div>
-
-                <div id="" class="boxTable">
-
-                    <table class="table t01">
+                            </tbody>
+                        </table>
+                        
+                        
+                        
+                    
+                    </div>    
+                    
+                    <!-- TABLE TWO -->
+                    
+                    <div id="" class="boxTable"> <!-- mode -->
+                    
+                        <table class="table t01" >
                         <thead class="thead-dark">
-                            <tr align="center">
-                                <th scope="col"><img src="assets/img/innova.png" height="50px"></th>
-                                <th scope="col">Sabado 10 Auditorio FIIS</th>
+                            <tr align = "center">
+                            <th scope="col"><img src="assets/img/innova.png" height="50px"></th>
+                            <th scope="col">Sabado 10 Auditorio FIIS</th>
                             </tr>
                         </thead>
                         <tbody align="center">
-                            <tr>
+                            <tr >
                                 <th scope="row">10:00 - 10:30</th>
-                                <td class="align-middle">Registro</td>
+                                <td class="align-middle bold">Registro</td>
                             </tr>
                             <tr>
                                 <th scope="row">10:30 - 11:30</th>
-                                <td class="align-middle" data-toggle="modal" data-target="#LiderazgoActivo">Liderazgo
-                                    activo</td>
+                                <td class="align-middle bold" data-toggle="modal" data-target="#LiderazgoActivo">Liderazgo activo</td>
                             </tr>
                             <tr>
                                 <th scope="row">11:30 - 12:30</th>
-                                <td class="align-middle" data-toggle="modal" data-target="#InteligenciaArtificial">Inteligencia
-                                    Artificial</td>
-
+                                <td class="align-middle bold" data-toggle="modal" data-target="#InteligenciaArtificial">Inteligencia Artificial</td>
+                                
                             </tr>
                             <tr>
                                 <th scope="row">12:30 - 2:30</th>
-                                <td class="align-middle">Libre</td>
-
+                                <td class="align-middle bold">Libre</td>
+                        
                             </tr>
                             <tr>
                                 <th scope="row">2:30 - 3:30</th>
-                                <td class="align-middle" data-toggle="modal" data-target="#RealidadVirtual">Realidad
-                                    Virtual</td>
+                                <td class="align-middle bold" data-toggle="modal" data-target="#RealidadVirtual">Realidad Virtual</td>
                             </tr>
                             <tr>
                                 <th scope="row">3:30 - 4:30</th>
-                                <td class="align-middle" data-toggle="modal" data-target="#Blockchain">Blockchain</td>
-
+                                <td class="align-middle bold" data-toggle="modal" data-target="#Blockchain">Blockchain</td>
+                                
                             </tr>
                             <tr>
                                 <th scope="row">4:30 - 5:00</th>
-                                <td>Coffee break</td>
+                                <td class="align-middle bold">Coffee break</td>
                             </tr>
                             <tr>
                                 <th scope="row">5:00 - 6:00</th>
-                                <td class="align-middle" data-toggle="modal" data-target="#TransformacionDigital">Transformacion
-                                    Digital</td>
+                                <td class="align-middle bold" data-toggle="modal" data-target="#TransformacionDigital">Transformacion Digital</td>
                             </tr>
                             <tr>
                                 <th scope="row">6:00 - 7:00</th>
-                                <td class="align-middle" data-toggle="modal" data-target="#EntregaDeCertificados">Entrega
-                                    de certificados</td>
-
+                                <td class="align-middle bold" data-toggle="modal" data-target="#EntregaDeCertificados">Entrega de certificados</td>
+                        
                             </tr>
-                        </tbody>
-                    </table>
-
-
-
-
-                </div>
-
-
-                <div class="modal fade" id="BigData" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle">Big Data</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body ">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img class="img-fluid ponente" src="assets/img/ponentes/EthelBazan.jpg" alt="EthelBazan">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h3 class="m-3">
-                                                Ethel Bazán
-                                            </h3>
-
-                                            <p>
-                                                Gerente de Big Data en Telefónica
-                                            </p>
-                                            <p>
-                                                Tema : Big Data
-                                            </p>
-                                        </div>
-
-                                    </div>
-
+                            </tbody>
+                        </table>
+                        
+                        
+                        
+                    
+                    </div>   
+                    
+                    <!-- Modals -->
+                    
+                    <div class="modal fade" id="BigData" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Big Data</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                <div class="modal-body ">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img class="img-fluid ponente" src="assets/img/ponentes/EthelBazan.jpg" alt="EthelBazan">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="m-3">
+                                                    Ethel Bazán
+                                                </h3>
+                    
+                                                <p>
+                                                    Gerente de Big Data en Telefónica
+                                                </p>
+                                                <p>
+                                                    Tema : Big Data
+                                                </p>
+                                            </div>
+                    
+                                        </div>
+                    
+                                    </div>
+                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="modal fade" id="ProyectoReniec" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle">Proyecto Reniec</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body ">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img class="img-fluid ponente" src="assets/img/ponentes/daniloChavez.jpg"
-                                                alt="daniloChavez">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h3 class="m-3">
-                                                Danilo Chávez
-                                            </h3>
-                                            <p>
-                                                Gerente de Tecnología e Información en RENIEC
-                                            </p>
-                                            <p>
-                                                Tema: Proyecto RENIEC
-                                            </p>
-                                        </div>
-
-                                    </div>
-
+                    
+                    <div class="modal fade" id="ProyectoReniec" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Proyecto Reniec</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                <div class="modal-body ">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img class="img-fluid ponente" src="assets/img/ponentes/daniloChavez.jpg" alt="daniloChavez">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="m-3">
+                                                    Danilo Chávez
+                                                </h3>
+                                                <p>
+                                                    Gerente de Tecnología e Información en RENIEC
+                                                </p>
+                                                <p>
+                                                    Tema: Proyecto RENIEC
+                                                </p>
+                                            </div>
+                    
+                                        </div>
+                    
+                                    </div>
+                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="modal fade" id="TransformacionDigital" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle">Transformación digital</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body ">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img class="img-fluid ponente" src="assets/img/ponentes/CarlosThais.jpg"
-                                                alt="CarlosThais">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h3 class="m-3">
-                                                Carlos Thais
-                                            </h3>
-                                            <p>
-                                                CEO en ATP INNOVATION CENTER
-                                            </p>
-                                            <p>
-                                                Tema: Transformación Digital
-                                            </p>
+                    
+                    <div class="modal fade" id="TransformacionDigital" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Transformación digital</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img class="img-fluid ponente" src="assets/img/ponentes/CarlosThais.jpg" alt="CarlosThais">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="m-3">
+                                                    Carlos Thais
+                                                </h3>
+                                                <p>
+                                                    CEO en ATP INNOVATION CENTER
+                                                </p>
+                                                <p>
+                                                    Tema: Transformación Digital
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="modal fade" id="InternetDeLasCosas" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle">Internet de las Cosas</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body ">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img class="img-fluid ponente" src="assets/img/ponentes/AldoArataFarach.jpg"
-                                                alt="CarlosThais">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h3 class="m-3">
-                                                Aldo Arata Farach
-                                            </h3>
-                                            <p>
-                                                Gerente de Marketing IoT y Smart Cities en Telefónica del Perú
-                                            </p>
-                                            <p>
-                                                Tema: Internet de las Cosas
-                                            </p>
+                    
+                    <div class="modal fade" id="InternetDeLasCosas" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Internet de las Cosas</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img class="img-fluid ponente" src="assets/img/ponentes/AldoArataFarach.jpg" alt="CarlosThais">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="m-3">
+                                                    Aldo Arata Farach
+                                                </h3>
+                                                <p>
+                                                    Gerente de Marketing IoT y Smart Cities en Telefónica del Perú
+                                                </p>
+                                                <p>
+                                                    Tema: Internet de las Cosas
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="modal fade" id="InteligenciaArtificial" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle">Inteligencia Artificial</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body ">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img class="img-fluid ponente" src="assets/img/ponentes/CiroRodriguez.png"
-                                                alt="CiroRodriguez">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h3 class="m-3">
-                                                Ciro Rodriguez
-                                            </h3>
-                                            <p>
-                                                Investigación y Desarrollo de Nuevos Productos en Autónomo
-                                            </p>
-                                            <p>
-                                                Tema: Inteligencia Artificial
-                                            </p>
+                    
+                    <div class="modal fade" id="InteligenciaArtificial" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Inteligencia Artificial</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img class="img-fluid ponente" src="assets/img/ponentes/CiroRodriguez.png" alt="CiroRodriguez">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="m-3">
+                                                    Ciro Rodriguez
+                                                </h3>
+                                                <p>
+                                                    Investigación y Desarrollo de Nuevos Productos en Autónomo
+                                                </p>
+                                                <p>
+                                                    Tema: Inteligencia Artificial
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="modal fade" id="InteligenciaArtificialreturns" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle">Inteligencia Artificial</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body ">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img class="img-fluid ponente" src="assets/img/ponentes/marcoReyna.jpg" alt="AldoArata">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h3 class="m-3">
-                                                Marco Reyna
-                                            </h3>
-                                            <p>
-                                                Project Engineer en Advanced 3D Tecnologies Peru SAC
-                                            </p>
-                                            <p>
-                                                Tema: Inteligencia Artificial
-                                            </p>
+                    
+                    <div class="modal fade" id="InteligenciaArtificialreturns" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Inteligencia Artificial</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img class="img-fluid ponente" src="assets/img/ponentes/marcoReyna.jpg" alt="AldoArata">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="m-3">
+                                                        Marco Reyna
+                                                </h3>
+                                                <p>
+                                                        Project Engineer en Advanced 3D Tecnologies Peru SAC 
+                                                </p>
+                                                <p>
+                                                        Tema: Inteligencia Artificial
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="modal fade" id="innovacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle">Innovación</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body ">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img class="img-fluid ponente" src="assets/img/ponentes/OrlandoTorres.jpg"
-                                                alt="AldoArata">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h3 class="m-3">
-                                                Orlando Torres
-                                            </h3>
-                                            <p>
-                                                Socio Director de Euroteknia Technologies
-                                            </p>
-                                            <p>
-                                                Tema: Innovación
-                                            </p>
+                    
+                    <div class="modal fade" id="innovacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Innovación</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img class="img-fluid ponente" src="assets/img/ponentes/OrlandoTorres.jpg" alt="AldoArata">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="m-3">
+                                                        Orlando Torres
+                                                </h3>
+                                                <p>
+                                                        Socio Director de Euroteknia Technologies
+                                                </p>
+                                                <p>
+                                                        Tema: Innovación
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="modal fade" id="RealidadVirtual" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle">Realidad Virtual</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body ">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img class="img-fluid ponente" src="assets/img/ponentes/TomyTomasTalledo.jpg"
-                                                alt="AldoArata">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h3 class="m-3">
-                                                Tomy Tomas Talledo
-                                            </h3>
-                                            <p>
-                                                Desarrollador de XR en 3DIQ
-                                            </p>
-                                            <p>
-                                                Tema: Realidad Virtual
-                                            </p>
+                    
+                    <div class="modal fade" id="RealidadVirtual" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Realidad Virtual</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img class="img-fluid ponente" src="assets/img/ponentes/TomyTomasTalledo.jpg" alt="AldoArata">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="m-3">
+                                                        Tomy Tomas Talledo
+                                                </h3>
+                                                <p>
+                                                        Desarrollador de XR en 3DIQ
+                                                </p>
+                                                <p>
+                                                        Tema: Realidad Virtual
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    
 
 
-
-                <div class="modal fade" id="LiderazgoActivo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle">Liderazgo Activo</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body ">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img class="img-fluid ponente" src="assets/img/ponentes/TomyTomasTalledo.jpg"
-                                                alt="AldoArata">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h3 class="m-3">
-                                                Cesar Vela
-                                            </h3>
-                                            <p>
-                                                Auditor en Olva Curier SAC
-                                            </p>
-                                            <p>
-                                                Tema: Liderazgo Activo
-                                            </p>
+                    <div class="modal fade" id="LiderazgoActivo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Liderazgo Activo</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img class="img-fluid ponente" src="assets/img/ponentes/cesarVela.jpg" alt="CesarVela">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="m-3">
+                                                        Cesar Vela
+                                                </h3>
+                                                <p>
+                                                        Auditor en Olva Curier SAC
+                                                </p>
+                                                <p>
+                                                        Tema: Liderazgo Activo
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
 
 
-
+                
 
 
 
@@ -759,110 +740,105 @@
             </div>
 
 
-            <div v-show=somos id="somos" style="background: whitesmoke;">
+            <div v-show=somos id="somos" style="background: whitesmoke; margin-bottom: 10px;">
 
-                <div class="main_container" style="margin-left:8%; margin-right:8%; margin-top: 3%;">
-                    <br>
-                    <h4 class="tittle" style="color:black; font-size: 35px">¿Quiénes somos?</h4>
-                    <p class="a">Somos parte de la familia del Centro Cultural Núcleo de la Facultad de Ingeniería
-                        Industrial y de Sistemas de la Universidad Nacional de Ingeniería, el cual nos brinda un
-                        espacio de aprendizaje continuo y ayuda al desarrollo de habilidades duras y blandas de los
-                        miembros para que puedan desenvolverse sin problemas en el entorno profesional. </p>
-                    <h4 class="tittle" style="color:black; font-size: 35px"> ¿Qué es Semana Nuclear?</h4>
-                    <p class="a">La Semana Nuclear es un evento realizado por el Centro Cultural Núcleo, constituye su
-                        evento principal y se realiza cada año con diferentes temáticas orientadas a la participación y
-                        el desarrollo del estudiante universitario. </p>
-                </div>
-                <br>
+                    <div class="main_container" style="margin-left:8%; margin-right:8%; margin-top: 3%;">
+                        <br>
+                        <h4 class="tittle" style="color:black; font-size: 35px">¿Quiénes somos?</h4>
+                            <p class="a">Somos parte de la familia del Centro Cultural Núcleo de la Facultad de Ingeniería Industrial y de Sistemas de la Universidad Nacional de Ingeniería, el cual nos brinda un espacio de aprendizaje continuo y ayuda al desarrollo de habilidades duras y blandas de los miembros para que puedan desenvolverse sin problemas en el entorno profesional. </p>
+                            <h4 class="tittle" style="color:black; font-size: 35px"> ¿Qué es la Semana Nuclear?</h4>
+                            <p class="a">La Semana Nuclear es un evento realizado por el Centro Cultural Núcleo, constituye su evento principal y se realiza cada año con diferentes temáticas orientadas a la participación y el desarrollo del estudiante universitario. </p>
+                        </div>
+                        <br>
 
-                <div class="container">
-                    <h4 style="font-size:70px">Semanas Nucleares</h4>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="main-timeline">
-                                <div class="timeline">
-                                    <a href="#" class="timeline-content">
-                                        <span class="year">2018</span>
-                                        <div class="inner-content">
-                                            <h3 class="title">Semana Nuclear 2018</h3>
-                                            <h3 class="title">INNOVA</h3>
-                                            <p class="description">
-                                                Semana enfocada a la transformación digital en las industrias
-                                                <br>Algunos temas a tocar:
-                                                <ul class="description">
-                                                    <li>Big Data</li>
-                                                    <li>Manufactura 4.0</li>
-                                                    <li>Blockchain</li>
-                                                </ul>
-                                            </p>
-
+                        <div class="container">
+                            <h4 style="font-size:70px">Semanas Nucleares</h4>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="main-timeline">
+                                        <div class="timeline">
+                                            <a href="#" class="timeline-content">
+                                                <span class="year">2018</span>
+                                                <div class="inner-content">
+                                                    <h3 class="title">Semana Nuclear 2018</h3>
+                                                    <h3 class="title">INNOVA</h3>
+                                                    <p class="description">
+                                                        Semana enfocada a la transformación digital en las industrias
+                                                        <br>Ejes temáticos:
+                                                        <ul class="description">
+                                                            <li>Big Data</li>
+                                                            <li>Manufactura 4.0</li>
+                                                            <li>Blockchain</li>
+                                                        </ul>
+                                                    </p>
+                                                    
+                                                </div>
+                                            </a>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="timeline">
-                                    <a href="#" class="timeline-content">
-                                        <span class="year">2017</span>
-                                        <div class="inner-content">
-                                            <h3 class="title">Semana Nuclear 2017</h3>
-                                            <h3 class="title">FINANCE WEEK</h3>
-                                            <p class="description">
-                                                Semana de encuentro profesional de finanzas
-                                                <br>Temas desarrollados:
-                                                <ul class="description">
-                                                    <li> Fintech</li>
-                                                    <li>Inversiones</li>
-                                                    <li>Finanzas Corporativas</li>
-                                                </ul>
-                                            </p>
+                                        <div class="timeline">
+                                            <a href="#" class="timeline-content">
+                                                <span class="year">2017</span>
+                                                <div class="inner-content">
+                                                    <h3 class="title">Semana Nuclear 2017</h3>
+                                                    <h3 class="title">FINANCE WEEK</h3>
+                                                    <p class="description">
+                                                        Semana de encuentro profesional de finanzas
+                                                        <br>Temas desarrollados:
+                                                        <ul class="description">
+                                                            <li> Fintech</li>
+                                                            <li>Inversiones</li>
+                                                            <li>Finanzas Corporativas</li>
+                                                        </ul>
+                                                    </p>
+                                                </div>
+                                            </a>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="timeline">
-                                    <a href="#" class="timeline-content">
-                                        <span class="year">2016</span>
-                                        <div class="inner-content">
-                                            <h3 class="title">Semana Nuclear 2016</h3>
-                                            <p class="description">
-                                                Orientado a la gestion empresarial difundiendo cultura profesional.
-                                                <br>Temas desarrollados:</p>
-                                            <ul class="description">
-                                                <li>Innovación y desarrollo con proyecciones para los proximos años</li>
-                                                <li>Gestión de proyectos y el impacto en la estrategia organizacional.</li>
-                                            </ul>
-                                            </p>
-
+                                        <div class="timeline">
+                                            <a href="#" class="timeline-content">
+                                                <span class="year">2016</span>
+                                                <div class="inner-content">
+                                                    <h3 class="title" style="color: #7cba01">Semana Nuclear 2016</h3>
+                                                    <p class="description">
+                                                        Orientado a la gestion empresarial difundiendo cultura profesional.
+                                                        <br>Temas desarrollados:</p>
+                                                        <ul class="description">
+                                                        <li>Innovación y desarrollo con proyecciones para los proximos años</li>
+                                                        <li>Gestión de proyectos y el impacto en la estrategia organizacional.</li>
+                                                        </ul>
+                                                    </p>
+                                                
+                                                </div>
+                                            </a>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="timeline">
-                                    <a href="#" class="timeline-content">
-                                        <span class="year">2015</span>
-                                        <div class="inner-content">
-                                            <h3 class="title">Semana Nuclear 2015</h3>
-                                            <p class="description">
-                                                Orientado a los emprendedores del Perú.
-                                                Contó con diversos talleres y ponencias de alto nivel.
-                                                Se desarrollo una feria laboral durante ese año.
-                                                <br>Temas tocados:
-                                                <ul class="description">
-                                                    <li>
-                                                        Arquelogía digital
-                                                    </li>
-                                                </ul>
-                                            </p>
+                                        <div class="timeline">
+                                            <a href="#" class="timeline-content">
+                                                <span class="year">2015</span>
+                                                <div class="inner-content">
+                                                    <h3 class="title">Semana Nuclear 2015</h3>
+                                                    <p class="description">
+                                                        Orientado a los emprendedores del Perú.
+                                                        Contó con diversos talleres y ponencias de alto nivel.
+                                                        Se desarrollo una feria laboral durante ese año.
+                                                        <br>Temas tocados:
+                                                        <ul class="description">
+                                                        <li>
+                                                            Arquelogía digital
+                                                        </li>
+                                                        </ul>
+                                                    </p>
+                                                </div>
+                                            </a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
             </div>
 
             <div v-show=ubicanos>
                 <div class="fiis mt-4 mr-5 ml-5">
-
+            
                     <div class="row desktop2">
                         <div class="col-6 col-md-4"></div>
                         <div class="col-6 col-md-4"></div>
@@ -870,13 +846,13 @@
                             <h1>
                                 Ubícanos
                             </h1>
-                            <h3>
+                            <h3 >
                                 Av. Tupac Amaru 280, Rímac 15333
-
+            
                             </h3>
                             <br>
                             <h1>
-                                <a href="https://goo.gl/maps/bq7B7x1qYWn" target="_blank" style=" color: #009bff;">
+                                <a href="https://goo.gl/maps/bq7B7x1qYWn" target="_blank" style=" color: #ffffff;">
                                     <i class="fas fa-map-marked-alt"></i>
                                     ¿Cómo llegar?
                                 </a>
@@ -888,74 +864,70 @@
                             <h3>
                                 918 385 494
                             </h3>
-
+            
                         </div>
 
-
+                        
                     </div>
 
                     <div class="row only-mobile">
-                        <div class="col-12 "></div>
-                        <div class="col-12 "></div>
-                        <div class="col-12 location">
-                            <h1 class="">
-                                Ubícanos
-                            </h1>
-                            <h3>
-                                Av. Tupac Amaru 280, Rímac 15333
-
-                            </h3>
-                            <br>
-                            <h1>
-                                <a href="https://goo.gl/maps/bq7B7x1qYWn" target="_blank" style=" color: #009bff;">
-                                    <i class="fas fa-map-marked-alt"></i>
-                                    ¿Cómo llegar?
-                                </a>
-                            </h1>
-                            <br>
-                            <h1>
-                                Contacto
-                            </h1>
-                            <h3>
-                                918 385 494
-                            </h3>
-
-                        </div>
-
-
+                            <div class="col-12 " ></div>
+                            <div class="col-12 " ></div>
+                            <div class="col-12 location" >
+                                <h1 class="" >
+                                    Ubícanos
+                                </h1>
+                                <h3 >
+                                    Av. Tupac Amaru 280, Rímac 15333
+                
+                                </h3>
+                                <br>
+                                <h1>
+                                    <a href="https://goo.gl/maps/bq7B7x1qYWn" target="_blank" style=" color: #ffffff;">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        ¿Cómo llegar?
+                                    </a>
+                                </h1>
+                                <br>
+                                <h1>
+                                    Contacto
+                                </h1>
+                                <h3>
+                                    918 385 494
+                                </h3>
+                
+                            </div>
+        
+                            
                     </div>
 
                 </div>
-
-
-
+            
+            
+            
             </div>
-
-
-
+        
+        
+        
         </div>
-
-
-
-
+        
+        
+        
+        
     </div> <!-- FINMEGADIV -->
 
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- <script src="count_dow.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="assets/js/show.js"></script>
-
+    
     <script src="assets/js/count_down.js"></script>
 
 </body>
-
 </html>

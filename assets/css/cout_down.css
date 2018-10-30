@@ -1,7 +1,6 @@
 body {
     background-color: #f2f1ed;
   }
-  
   .wrap {
     position: absolute;
     bottom: 0;
@@ -11,12 +10,10 @@ body {
     margin: auto;
     height: 310px;
   }
-  
   a {
     text-decoration: none;
     color: #1a1a1a;
   }
-  
   h1 {
     margin-bottom: 60px;
     text-align: center;
@@ -27,7 +24,6 @@ body {
     font-weight: 400;
     color: #ea4c4c;
   }
-  
   h2 {
     margin-bottom: 80px;
     text-align: center;
@@ -37,7 +33,6 @@ body {
   h2 strong {
     font-weight: 400;
   }
-  
   .countdown {
     width: 1000px;
     margin: 0 auto;
@@ -174,24 +169,6 @@ body {
 
 
   @media only screen and (max-width: 960px) {
-    /* For mobile phones: */
-    /* .countdown {
-      width: 100%;
-      display: inline-block;
-      text-align: center;
-      margin: 0 auto;
-    } */
-
-    /* .countdown .figure {
-      
-      position:fixed;
-
-      width:100px;
-      height:100px;
-
-      
-    } */
-
 
     .countdown { 
        

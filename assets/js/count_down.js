@@ -5,42 +5,26 @@ date = {
     minutes:0,
     seconds:0
 }
-
-
-//Day of the event
 var countDownDate = new Date("Nov 07, 2018 14:01:00").getTime();
-
 var now = new Date().getTime();
-
-// Find the distance between now and the count down date
 var distance = countDownDate - now;
 
-// Time calculations for days, hours, minutes and seconds
 date.days = Math.floor(distance / (1000 * 60 * 60 * 24));
 date.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 date.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 date.seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-
-//DOM the first element
-
 document.getElementsByClassName("day").innerHTML = date.days; 
 
-
-  // Create Countdown
 var Countdown = {
   
-  // Backbone-like structure
   $el: $('.countdown'),
   
-  // Params
   countdown_interval: null,
   total_seconds     : 0,
   
-  // Initialize the countdown  
   init: function() {
     
-    // DOM
 		this.$ = {
         days : this.$el.find('.bloc-time.days .figure'),
     	hours  : this.$el.find('.bloc-time.hours .figure'),
@@ -48,7 +32,6 @@ var Countdown = {
     	seconds: this.$el.find('.bloc-time.sec .figure')
    	};
 
-    // Init countdown values
     this.values = {
         days  : date.days,
 	    hours  : date.hours,
@@ -56,10 +39,8 @@ var Countdown = {
         seconds: date.seconds,
     };
     
-    // Initialize total seconds
     this.total_seconds = this.values.days * 24 * 60 * 60 + (this.values.hours * 60 * 60) + (this.values.minutes * 60) + this.values.seconds;
 
-    // Animate countdown to the end 
     this.count();    
   },
   
@@ -98,18 +79,9 @@ var Countdown = {
                 that.values.hours = 23;
                 --that.values.days;
             }
-
-
-            // Update DOM values
-            // Days
             that.checkHour(that.values.days, $day_1, $day_2);
-            // Hours
             that.checkHour(that.values.hours, $hour_1, $hour_2);
-
-            // Minutes
             that.checkHour(that.values.minutes, $min_1, $min_2);
-
-            // Seconds
             that.checkHour(that.values.seconds, $sec_1, $sec_2);
 
             --that.total_seconds;
@@ -128,13 +100,9 @@ var Countdown = {
         $back_top    = $el.find('.top-back'),
         $back_bottom = $el.find('.bottom-back');
 
-    // Before we begin, change the back value
     $back_top.find('span').html(value);
-
-    // Also change the back bottom value
     $back_bottom.find('span').html(value);
 
-    // Then animate
     TweenMax.to($top, 0.8, {
         rotationX           : '-180deg',
         transformPerspective: 300,
@@ -166,18 +134,15 @@ var Countdown = {
 
     if(value >= 10) {
 
-        // Animate only if the figure has changed
         if(fig_1_value !== val_1) this.animateFigure($el_1, val_1);
         if(fig_2_value !== val_2) this.animateFigure($el_2, val_2);
     }
     else {
 
-        // If we are under 10, replace first figure with 0
         if(fig_1_value !== '0') this.animateFigure($el_1, 0);
         if(fig_2_value !== val_1) this.animateFigure($el_2, val_1);
     }    
   }
 };
 
-// Let's go !
 Countdown.init();
